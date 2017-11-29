@@ -17,5 +17,6 @@
         <property name="hbm2ddl.auto">update</property>
         <!-- Mapping with model class containing annotations -->
         <mapping class="com.infoshareacademy.car.domain.model.Car"/>
+        <mapping class="com.infoshareacademy.car.domain.model.CarExtended"/>
     </session-factory>
 </hibernate-configuration>

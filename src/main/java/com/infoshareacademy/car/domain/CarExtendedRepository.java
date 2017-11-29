@@ -1,25 +1,25 @@
 package com.infoshareacademy.car.domain;
 
-import com.infoshareacademy.car.domain.model.Car;
+import com.infoshareacademy.car.domain.model.CarExtended;
+import com.infoshareacademy.car.domain.model.CarExtendedId;
 import com.infoshareacademy.hibernate.SessionFactoryProvider;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-public class CarRepository {
+public class CarExtendedRepository {
 
-    public Car findCarById(long id) {
+    public CarExtended findCarById(CarExtendedId id) {
         Session session= SessionFactoryProvider.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
-        Car car = (Car) session.get(Car.class, id);
+        CarExtended car = (CarExtended) session.get(CarExtended.class, id);
         tx.commit();
         return car;
     }
 
-    public void saveCar(Car car) {
+    public void saveCar(CarExtended car) {
         Session session= SessionFactoryProvider.getSessionFactory().getCurrentSession();
         Transaction tx = session.beginTransaction();
         session.persist(car);
         tx.commit();
     }
-
 }
