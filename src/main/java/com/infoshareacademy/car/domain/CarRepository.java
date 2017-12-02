@@ -22,4 +22,34 @@ public class CarRepository {
         tx.commit();
     }
 
+    //save
+//    public void saveCar(Car car) {
+//        Session session= SessionFactoryProvider.getSessionFactory().openSession();
+//        session.save(car);
+//        session.flush();
+//        session.close();
+//    }
+
+    //merge
+//    public void saveCar(Car car) {
+//        Session session= SessionFactoryProvider.getSessionFactory().getCurrentSession();
+//        Transaction tx = session.beginTransaction();
+//        session.persist(car);
+//        session.evict(car);
+//        car.setModel("Bmw x1");
+//        Car car1 = (Car) session.merge(car);
+//        car1.setModel("Mercedes cls");
+//        tx.commit();
+//    }
+
+    //update
+//    public void saveCar(Car car) {
+//        Session session= SessionFactoryProvider.getSessionFactory().getCurrentSession();
+//        Transaction tx = session.beginTransaction();
+//        session.evict(car);
+//        car.setModel("Bmw x1");
+//        session.update(car);
+//        tx.commit();
+//    }
+
 }

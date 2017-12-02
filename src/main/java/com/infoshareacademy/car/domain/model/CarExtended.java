@@ -15,7 +15,6 @@ public class CarExtended {
     @Enumerated(EnumType.STRING)
     private Color color;
 
-    @Column(name = "PRODUCTION_YEAR")
     private Timestamp productionYear;
 
     public CarExtendedId getId() {
